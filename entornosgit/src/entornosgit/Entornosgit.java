@@ -49,6 +49,14 @@ public class Entornosgit {
         for (int i = 0; i < numeros.length; i++) {
             System.out.println(numeros[i]);
         }
+        
+        System.out.println("Introduce el número que quieres buscar en el array");
+        int n=sc.nextInt();
+        boolean numEncontrado = buscarNum(numeros, n);
+        if (numEncontrado)
+            System.out.println("El número "+n+" está en el array");
+        else 
+            System.out.println("El número "+n+" no está.");
     }
 
     public static void burbuja(int[] A) {
@@ -72,6 +80,14 @@ public class Entornosgit {
             }
         }
         return repetido;
+    }
+    
+    public static boolean buscarNum (int num[], int n) {
+        for (int i=0;i<num.length;i++){
+            if (n==num[i])
+                return true; 
+        }
+        return false;
     }
 
 }
