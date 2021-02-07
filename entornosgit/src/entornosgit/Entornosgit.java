@@ -50,6 +50,16 @@ public class Entornosgit {
             System.out.println(numeros[i]);
         }
         
+      
+        boolean tam=validarTam(numeros, numArray);
+        
+        if (tam)
+            System.out.println("El tamaño del array es el correcto");
+        else
+            System.out.println("El tamaño del array es incorrecto");
+
+      
+      
         System.out.println("Introduce el número que quieres buscar en el array");
         int n=sc.nextInt();
         boolean numEncontrado = buscarNum(numeros, n);
@@ -57,8 +67,11 @@ public class Entornosgit {
             System.out.println("El número "+n+" está en el array");
         else 
             System.out.println("El número "+n+" no está.");
+
+      
     }
 
+  
     public static void burbuja(int[] A) {
         int i, j, aux;
         for (i = 0; i < A.length - 1; i++) {
@@ -82,6 +95,17 @@ public class Entornosgit {
         return repetido;
     }
     
+  
+
+    public static boolean validarTam (int num[], int numA) {
+        if (num.length == numA) {
+            return true;
+        } else {
+            return false;
+        }
+        
+      
+
     public static boolean buscarNum (int num[], int n) {
         for (int i=0;i<num.length;i++){
             if (n==num[i])
