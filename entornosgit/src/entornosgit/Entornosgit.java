@@ -19,10 +19,18 @@ public class Entornosgit {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner sc = new Scanner(System.in);
-
-        int numeros[] = new int[10];
-        int num;
+        
+        int num, numArray;
         boolean repetido;
+        
+        do{
+            System.out.println("Anota la cantidad de números que quieres leer");
+            numArray=sc.nextInt();
+            if (numArray<1||numArray>10)
+                System.out.println("Tiene que ser entre 1 y 10");
+        }while (numArray<1||numArray>10);
+        
+        int numeros[] = new int[numArray];
 
         for (int i = 0; i < numeros.length; i++) {
             do {
