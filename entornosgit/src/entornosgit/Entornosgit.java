@@ -49,6 +49,13 @@ public class Entornosgit {
         for (int i = 0; i < numeros.length; i++) {
             System.out.println(numeros[i]);
         }
+        
+        boolean tam=validarTam(numeros, numArray);
+        
+        if (tam)
+            System.out.println("El tamaño del array es el correcto");
+        else
+            System.out.println("El tamaño del array es incorrecto");
     }
 
     public static void burbuja(int[] A) {
@@ -72,6 +79,15 @@ public class Entornosgit {
             }
         }
         return repetido;
+    }
+    
+    public static boolean validarTam (int num[], int numA) {
+        if (num.length == numA) {
+            return true;
+        } else {
+            return false;
+        }
+        
     }
 
 }
