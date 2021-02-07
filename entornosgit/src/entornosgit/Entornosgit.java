@@ -103,9 +103,9 @@ public class Entornosgit {
         } else {
             return false;
         }
+    }
         
       
-
     public static boolean buscarNum (int num[], int n) {
         for (int i=0;i<num.length;i++){
             if (n==num[i])
